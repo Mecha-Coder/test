@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 16:29:03 by jetan             #+#    #+#             */
-/*   Updated: 2024/09/29 19:14:42 by jetan            ###   ########.fr       */
+/*   Updated: 2024/09/30 16:40:09 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	is_numeric(char *str)
 	int	i;
 	
 	i = -1;
-	if (str[0] == '-')
+	if ((str[0] == '-' || str[0] == '+') && (str[1] != '-' && str[1] != '+'))
 		i = 1;
 	while (str[++i])
 	{
@@ -51,7 +51,7 @@ void	builtins_exit(char **av)
 		exit(0);
 	}
 }
-
+//haven't handle the too many argument ex: exit 4 2
 int main(int ac, char **av)
 {
 	(void)ac;
