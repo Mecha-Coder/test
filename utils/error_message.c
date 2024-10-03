@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pwd.c                                              :+:      :+:    :+:   */
+/*   error_message.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 18:36:36 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/01 14:23:43 by jetan            ###   ########.fr       */
+/*   Created: 2024/10/03 15:22:19 by jetan             #+#    #+#             */
+/*   Updated: 2024/10/03 16:51:27 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-void	builtin_pwd()
+void	error_message(char *builtin, char *arg)
 {
-	char	buf[1024];
+	ft_putstr_fd();
 	
-	if (getcwd(buf, sizeof(buf)) != NULL)
-		printf("%s\n", buf);
-	else
-		perror("pwd");
 }
-// int main()
-// {
-// 	builtins_pwd();
-// }

@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pwd.c                                              :+:      :+:    :+:   */
+/*   unset.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 18:36:36 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/01 14:23:43 by jetan            ###   ########.fr       */
+/*   Created: 2024/09/30 14:49:49 by jetan             #+#    #+#             */
+/*   Updated: 2024/10/03 12:55:10 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-void	builtin_pwd()
+void	builtin_unset(char **av)//haven't finish
 {
-	char	buf[1024];
+	int	i;
+	int	j;
+	int	var_count = 0;//struct
 	
-	if (getcwd(buf, sizeof(buf)) != NULL)
-		printf("%s\n", buf);
-	else
-		perror("pwd");
+	i = 0;
+	while (av[++i])
+	{
+		j = -1;
+		while (j < var_count)
+		{
+		}
+	}
 }
-// int main()
-// {
-// 	builtins_pwd();
-// }
