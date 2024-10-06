@@ -6,11 +6,29 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 14:17:06 by jetan             #+#    #+#             */
-/*   Updated: 2024/09/28 14:17:09 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/06 17:16:25 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
+
+int	n_option(char *str)
+{
+	int	i;
+	
+	if (str[0] == '-' && str[1] == 'n')
+	{
+		i = 2;
+		while (str[i])
+		{
+			if (str[i] != 'n')
+				return (0);
+			i++;
+		}
+		return (1);
+	}
+	return (0);
+}
 
 void	builtin_echo(char **av)
 {
@@ -19,13 +37,13 @@ void	builtin_echo(char **av)
 	
 	i = 1;
 	new_line = 1;
-	if (av[1] != NULL && ft_strncmp(av[1], "-n", 2) == 0 && av[1][2] == '\0')
+	while (av[i] != NULL && n_option(av[i]))
 	{
 		new_line = 0;
-		i = 2;
+		i++;
 	}
 	while (av[i])
-	{
+	{	
 		printf("%s", av[i]);
 		if (av[i + 1] != NULL)
 			printf(" ");
@@ -34,11 +52,8 @@ void	builtin_echo(char **av)
 	if (new_line)
 		printf("\n");
 }
-// with % no newline
-// without % newline
-// int main()
-// {
-// 	char *args[] = {"echo", "-n", "hello", "world", NULL};
-	
-// 	builtin_echo(args);
-// }
+int main(int ac, char **av)
+{
+	(void)ac;
+	builtin_echo(av);
+}
