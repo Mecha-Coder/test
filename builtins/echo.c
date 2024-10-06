@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 14:17:06 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/06 17:16:25 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/06 17:22:50 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void	builtin_echo(char **av)
 	if (new_line)
 		printf("\n");
 }
-int main(int ac, char **av)
-{
-	(void)ac;
-	builtin_echo(av);
-}
+// int main(int ac, char **av)
+// {
+// 	(void)ac;
+// 	builtin_echo(av);
+// }
