@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:25:05 by jetan             #+#    #+#             */
-/*   Updated: 2023/11/05 20:08:12 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/07 17:00:44 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	sign = 1;
 	while (*str == 32 || (*str >= 9 && *str <= 13))
-	str++;
+		str++;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')

@@ -6,7 +6,7 @@
 #    By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 21:33:59 by jetan             #+#    #+#              #
-#    Updated: 2023/11/18 17:34:13 by jetan            ###   ########.fr        #
+#    Updated: 2024/10/07 16:58:24 by jetan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ MY_SOURCE = ft_isalpha.c \
 			ft_putnbr_fd.c \
 			ft_split.c \
 			ft_strmapi.c \
+			ft_strcmp.c
 
 MY_OBJECTS = $(MY_SOURCE:.c=.o)
 

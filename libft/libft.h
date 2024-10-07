@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:55:33 by jetan             #+#    #+#             */
-/*   Updated: 2023/11/17 18:00:07 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/07 16:59:48 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
+int			ft_strcmp(const char *s1, const char *s2);
 
 #endif
