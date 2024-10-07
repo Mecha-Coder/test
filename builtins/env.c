@@ -6,13 +6,18 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:12:19 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/03 13:17:16 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/07 09:01:46 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-builtin_env()
+void	builtin_env()
 {
-	
+	while ()
+	{
+		printf("%s\n", );
+		
+	}
+	get_exit_status();
 }
