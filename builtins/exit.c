@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 16:29:03 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/04 16:25:00 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/09 15:15:24 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	builtin_exit(char **av)
 		error_message("exit", av[1], "numeric argument required");
 		exit(2);
 	}
-	if (av[1] && av[2])
+	if (arg_count(av) > 2)
 	{
 		ft_putstr_fd("exit: too many arguments\n", 2);
 		return;
@@ -53,8 +53,8 @@ void	builtin_exit(char **av)
 	exit (exit_status);
 	
 }
-// int main(int ac, char **av)
-// {
-// 	(void)ac;
-// 	builtin_exit(av);
-// }
+int main(int ac, char **av)
+{
+	(void)ac;
+	builtin_exit(av);
+}
