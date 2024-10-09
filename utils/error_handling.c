@@ -6,28 +6,42 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:02:40 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/09 15:30:38 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/09 17:49:31 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-void	error_message(char *builtin, char *arg, char *mssg)
+void	error_arg_msg(char *builtin, char *arg, char *msg)
 {
+	ft_putstr_fd("minishell: ", 2);
 	ft_putstr_fd(builtin, 2);
 	ft_putstr_fd(": ", 2);
 	ft_putstr_fd(arg, 2);
 	ft_putstr_fd(": ", 2);
-	ft_putstr_fd(mssg, 2);
+	ft_putstr_fd(msg, 2);
 	ft_putstr_fd("\n", 2);
 }
 
-int	arg_count(char **args)
+void	error_msg(char *builtin, char *msg)
 {
-	int	count;
+	ft_putstr_fd("minishell: ", 2);
+	ft_putstr_fd(builtin, 2);
+	ft_putstr_fd(": ", 2);
+	ft_putstr_fd(msg, 2);
+	ft_putstr_fd("\n", 2);
+}
+
+void	arg_count(char **args, char *builtin)
+{
+	int		count;
 	
 	count = 0;
 	while (args[count])
 		count++;
-	return (count);
+	if (count > 2)
+	{
+		error_msg(builtin, "too many arguments");
+		return;
+	}
 }
