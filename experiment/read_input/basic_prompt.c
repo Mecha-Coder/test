@@ -6,7 +6,7 @@
 #include <readline/history.h>
 #include <unistd.h>
 
-# define PROMPT "\001\e[0m\e[33m\002Minishell> \001\e[0m\002"
+#define PROMPT "\001\e[0m\e[33m\002Minishell> \001\e[0m\002"
 
 void buildin(void)
 {
@@ -36,6 +36,11 @@ int main()
             else if (input[0])
                 printf("%s\n",input);
             free(input);
+        }
+        else
+        {
+            printf("\nShuting down\n");
+            break;
         }
     }
     return (0);

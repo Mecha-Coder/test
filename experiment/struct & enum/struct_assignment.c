@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.c                                           :+:      :+:    :+:   */
+/*   struct_assignment.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpaul <jpaul@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 02:23:20 by jpaul             #+#    #+#             */
-/*   Updated: 2024/10/03 02:23:20 by jpaul            ###   ########.fr       */
+/*   Updated: 2024/10/08 16:46:00 by jpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ typedef struct s_data
 	int	b;
 }	t_data;
 
-t_data	createnode(int a, int b)
+void	createnode(t_data *x)
 {
-	return ((t_data){a, b});
+	*x = (t_data){22, 55};
 }
 
 int	main(void)
 {
 	t_data	x;
 
-	x = createnode(40, 56);
+	createnode(&x);
 	printf("%d, %d\n", x.a, x.b);
 	return (0);
 }
