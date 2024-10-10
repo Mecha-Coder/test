@@ -6,41 +6,34 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:24:56 by jetan             #+#    #+#             */
-/*   Updated: 2024/10/01 16:57:47 by jetan            ###   ########.fr       */
+/*   Updated: 2024/10/09 18:53:38 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
+
+
 builtin_cd(char **av)
 {
+	char cwd[1024];
 	char	*oldpwd;
 	char	*home;
 	
 	oldpwd = getenv("PWD");
 	home = getenv("HOME");
+	arg_count(av, "cd");
 	if (!av[1])//no argument
 	{
-		if(chdir(home))
-		{
-			
-		}
+		//back to root
 	}
-	else if (path == '-')//back to previous dir + print out pwd
-	{
-		
-	}
-	else if (path == '..' || path == '/')// "cd /""
-	{
-		if (path == '/')
-	}
-	else if (path == '~')
+	else if (ft_strcmp(av[1], '-') == 0)
 	{
 		
 	}
 	else
 	{
-		printf("%s: No such file or directory", path);
+		
 	}
 }
 
